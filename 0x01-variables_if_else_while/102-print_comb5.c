@@ -1,33 +1,39 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there */
+
 /**
- * main - all possible combinations of two two-digit numbers.
+ * main - program that prints all possible combinations of
+ * two two-digit
+ * The numbers should range from 0 to 99
+ * Numbers must be separated by ,followed by a space
+ * All numbers should be printed with two digits. 1 should be printed as 01
  * Return: 0
  */
+
 int main(void)
 {
-int i;
-int j;
-int head = 0;
-for (i = 0 ; i < 100 ; i++)
+int n1 = 48;
+int a = 0;
+int b;
+int com = 44;
+
+while (a <= 99)
 {
-for (j = i + 1 ; j < 100; j++)
+b = a + 1;
+while (b <= 99)
 {
-if (head != 0)
+putchar((a / 10) + n1);
+putchar((a % 10) + n1);
+putchar(32);
+putchar((b / 10) + n1);
+putchar((b % 10) + n1);
+if (a != 98 || b != 99)
 {
-putchar(44);
+putchar(com);
 putchar(32);
 }
-putchar((i > 10) ? ((i - (i % 10)) / 10) + 48 : 48);
-putchar(i % 10 + 48);
-putchar(32);
-putchar((j > 10) ? ((j - (j % 10)) / 10) + 48 : 48);
-putchar(j % 10 + 48);
-head++;
+b += 1;
 }
+a += 1;
 }
 putchar('\n');
 return (0);
