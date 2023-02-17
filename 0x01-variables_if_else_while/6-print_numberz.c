@@ -1,4 +1,4 @@
-#include <stdlib.h>
+i#include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
@@ -12,14 +12,8 @@ int main(void)
 int i;
 for (i = 48 ; i < 58 ; i++)
 {
-putchar(32);
 putchar(i);
-if (i != 57)
-{
-putchar(44);
-}
 }
 putchar('\n');
 return (0);
 }
-
