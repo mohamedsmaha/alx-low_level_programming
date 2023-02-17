@@ -12,7 +12,10 @@ int main(void)
 int i;
 for (i = 48 ; i < 58 ; i++)
 {
-putchar(32);
+if (i != 48)
+{
+putchar(32)
+}
 putchar(i);
 if (i != 57)
 {
